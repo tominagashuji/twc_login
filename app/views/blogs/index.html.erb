@@ -2,32 +2,31 @@
 <!--<p>Find me in app/views/blogs/index.html.erb</p>-->
 
 <body>
-<h1>つぶやき一覧</h1>
+  <div class="container">
 
-<p><%= notice %></p>
+  <%= render 'header' %>
 
-<table>
-  <tr>
-    <!--<th>タイトル</th>-->
-    <th>内容</th></th>
-  </tr>
+  <h1>つぶやき一覧</h1>
 
-<% @blogs.each do |blog| %>
-  <tr>
-    <td><%= blog.content %></td>
-    <a><td class="btn"><%= link_to '詳細を確認する', blog_path(blog.id) %></td></a>
-    <!--<td><%= link_to "ブログを編集する", edit_blog_path(blog.id) %></td>-->
-    <a><td class="btn"><%= link_to "つぶやきを編集する", edit_blog_path(blog.id), data: { confirm: '本当に編集していいですか？' } %></td></a>
-        <% # ここに定義する！destroyをビューに設定する %>
-    <!--<td><%= link_to 'ブログを削除する', blog_path(blog.id), method: :delete %></td>-->
-    <a><td class="btn"><%= link_to 'つぶやきを削除する', blog_path(blog.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td></a>
-  </tr>
-<% end %>
-</table>
+  <p><%= notice %></p>
 
-<br>
+  <div class="wrapper clearfix">
 
-<!--<%= link_to 'ブログ一覧画面にもどる', blogs_path %><br>-->
-<%= link_to 'つぶやき新規作成画面へ', new_blog_path %><br>
+    <table class="tbl">
+      <tr>
+        <th>内容</th>
+      </tr>
 
+      <% @blogs.each do |blog| %>
+      <tr>
+        <p><th><%= blog.content %></th></p>
+        <a><td class="btn"><%= link_to '詳細を確認する', blog_path(blog.id) %></td></a>
+        <a><td class="btn"><%= link_to "つぶやきを編集", edit_blog_path(blog.id), data: { confirm: '本当に編集していいですか？' } %></td></a>
+        <a><td class="btn"><%= link_to 'つぶやきを削除', blog_path(blog.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td></a>
+      </tr>
+      <% end %>
+    </table>
+    <%= render 'footer' %>
+  </div>
+  </div>
 </body>

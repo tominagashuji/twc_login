@@ -2,21 +2,131 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 body{
-  background-color: #DDDDFF;
+  background-color: #FFFFFF;
+}
+
+.container{
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100%;
+  // word-wrap: break-word;
+}
+
+.wrapper{
+  margin-top: 10px;
+  padding-bottom: 150px;
+  width: 100%;
 }
 
 h1{
-  color: #ffffff;
+  color: #00AAFF;
+  text-align: center;
 }
 
 h2{
-  color: #ffffff;
+  color: #00AAFF;
+  text-align: center;
+}
+
+.header {
+  background-color: #CCEEFF;
+  padding: 15px;
+}
+
+.header a{
+  text-decoration: none;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.container.content{
+  width: 100%;
+  height: auto;
+}
+
+// ボタン領域
+.btn_home{
+  margin-left:5%;
+  color: #00AAFF;
+}
+
+.btn_new{
+  margin-left:80%;
+  color: #00AAFF;
+}
+
+.div_header{
+  background-color: #0099FF;
+  padding: 5px;
+  text-align:center;
+}
+
+.area_logo{
+  background-color: #0099FF;
+  color: #3300FF;
+
+}
+
+// テーブル領域
+.tbl {
+  width: 95%;
+  border-top: 1px solid #ccc;  /*topのみ*/
+}
+
+.tbl tr{
+  width: 100%;
+}
+
+.tbl th{
+  width: 60%;
+  word-break: break-all; /*改行の設定*/
+  border-bottom:1px solid #ccc;  /*bottomのみ*/
+}
+
+.tbl td{
+  width: 10%;
+}
+
+.tbl p{
+  width: 500px;
+}
+.tbl a{
+  width: auto;
 }
 
 // new 画面
+.btn_index{
+	background-color: #CCEEFF;
+}
 .btn{
-	background-color: #AAAAFF;
+	background-color: #CCEEFF;
+  // font-size:2rem;
+  // width: 100px;
+  // margin-left: 20px;
+  // margin-right: 50px;
 }
 
+
+// footer領域
+.footer{
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  background-color: #CCEEFF;
+  display: table;
+}
+
+.footer p {
+  font-size: 1rem;
+  color: #00AAFF;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
