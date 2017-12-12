@@ -1,7 +1,34 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#gnavi">
+        <span class="sr-only">Bootstrap</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Bootstrap
+
+      </a>
+    </div>
+    <div id="gnavi" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="">top</a></li>
+        <li><a href="">つぶやく</a></li>
+        <li><a href="">つぶやきたい</a></li>
+        <li><a href="">つぶやくかも</a></li>
+        <li><a href="">つぶやくものか</a></li>
+        <li><a href="">つぶやいたら負け</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
   <header class="header clearfix">
     <a><%= link_to 'ホーム', blogs_path , class: "btn_home" %></a>
     <a><%= link_to 'つぶやき', new_blog_path ,  class: "btn_new" %></a>
   </header>
   <div class="div_header">
-    <a class="area_logo">生きてればいい事あるさ〜。</a>
+    <a>生きてればいい事あるさ〜。</a>
+    <a href="">
+      <img src="assets/bootstrap01.jpeg" class="area_logo img-responsive"></a>
   </div>

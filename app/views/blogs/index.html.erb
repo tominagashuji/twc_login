@@ -1,32 +1,29 @@
-<!--<h1>Blogs#index</h1>  rails19の一覧表示機能について変更した-->
-<!--<p>Find me in app/views/blogs/index.html.erb</p>-->
-
 <body>
+
   <div class="container">
+    <%= render 'header' %>
 
-  <%= render 'header' %>
+    <h1>つぶやき一覧</h1>
 
-  <h1>つぶやき一覧</h1>
+    <p><%= notice %></p>
 
-  <p><%= notice %></p>
-
-  <div class="wrapper clearfix">
-
-    <table class="tbl">
-      <tr>
-        <th>内容</th>
-      </tr>
-
-      <% @blogs.each do |blog| %>
-      <tr>
-        <p><th><%= blog.content %></th></p>
-        <a><td class="btn"><%= link_to '詳細を確認する', blog_path(blog.id) %></td></a>
-        <a><td class="btn"><%= link_to "つぶやきを編集", edit_blog_path(blog.id), data: { confirm: '本当に編集していいですか？' } %></td></a>
-        <a><td class="btn"><%= link_to 'つぶやきを削除', blog_path(blog.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td></a>
-      </tr>
-      <% end %>
-    </table>
-    <%= render 'footer' %>
-  </div>
+    <div class="wrapper clearfix row">
+      <table class="tbl">
+        <tr>
+          <th>内容</th>
+        </tr>
+        <% @blogs.each do |blog| %>
+        <tr class="btn-group" role="group" aria-label="...">
+          <p><th><%= blog.content %></th></p>
+          <a><td button type="button" class="col-xs-12 col-sm-4 col-md-2 btn"><%= link_to '詳細', blog_path(blog.id) %></td></a>
+          <a><td button type="button" class="col-xs-12 col-sm-4 col-md-2 btn"><%= link_to '編集', edit_blog_path(blog.id), data: { confirm: '本当に編集していいですか？' } %></td></a>
+          <a><td button type="button" class="col-xs-12 col-sm-4 col-md-2 btn"><%= link_to '削除', blog_path(blog.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td></a>
+        </tr>
+        <% end %>
+      </table>
+      
+      <%= render 'footer' %>
+    </div>
   </div>
 </body>
+

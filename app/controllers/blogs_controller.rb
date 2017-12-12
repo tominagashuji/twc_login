@@ -2,6 +2,7 @@ class BlogsController < ApplicationController
   def index
   end
 end
+
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy] # DRYにてアクションの前に設置
 

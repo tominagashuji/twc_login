@@ -52,13 +52,13 @@ h2{
 
 // ボタン領域
 .btn_home{
-  margin-left:5%;
   color: #00AAFF;
+  float:left;
 }
 
 .btn_new{
-  margin-left:80%;
   color: #00AAFF;
+  float:right;
 }
 
 .div_header{
@@ -70,7 +70,13 @@ h2{
 .area_logo{
   background-color: #0099FF;
   color: #3300FF;
+  width:100%;
+  margin:0;
+}
 
+.img-responsive{
+  margin: 0 auto;
+  width:80%;
 }
 
 // テーブル領域
@@ -89,9 +95,9 @@ h2{
   border-bottom:1px solid #ccc;  /*bottomのみ*/
 }
 
-.tbl td{
-  width: 10%;
-}
+// .tbl td{
+//   width: 10%;
+// }
 
 .tbl p{
   width: 500px;
