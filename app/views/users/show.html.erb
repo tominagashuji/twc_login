@@ -1,3 +1,33 @@
-<h1><%= @user.name %>のページ</h1>
+<div class="jumbotron">
 
-<p>メールアドレス: <%= @user.email %></p>
+  <% if logged_in? %>
+  
+    <button type="button" class="btn btn-info">
+        <%= link_to "Profile", user_path(current_user.id) %>
+    </button>
+    <button type="button" class="btn btn-success">
+        <%= link_to "Logout", session_path(current_user.id), method: :delete %>
+    </button>
+    <!-- 171212 ログインした後にプロフィール画面からブログに戻れないから追記！！-->
+    <button type="button" class="btn btn-warning">
+        <%= link_to "blogs", blogs_path(current_user.id) %>
+    </button>
+  
+  <% else %>
+  
+    <button type="button" class="btn btn-warning">
+      <%= link_to "Sign up", new_user_path %>
+    </button>
+    <button type="button" class="btn btn-warning">
+      <%= link_to "Login", new_session_path %>
+    </button>
+  
+  <% end %>
+
+	<div class="container">
+		<h1><%= @user.name %>のページ</h1>
+		<p>メールアドレス: <%= @user.email %></p>
+		<%= form_with(scope: :session, url: sessions_path) do |f| %>
+		<% end %>
+	</div>
+</div>

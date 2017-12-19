@@ -3,7 +3,7 @@ class User < ApplicationRecord
 	validates :name, presence: true
 	validates :email, presence: true
 
-# 長さの確認（presence）
+# 長さの確認（presence）、emailの判定
 	validates :name,  presence: true, length: { maximum: 30 }
 	validates :email, presence: true, length: { maximum: 255 },
                     format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }

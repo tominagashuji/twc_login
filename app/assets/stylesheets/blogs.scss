@@ -93,30 +93,23 @@ h2{
   width: 60%;
   word-break: break-all; /*改行の設定*/
   border-bottom:1px solid #ccc;  /*bottomのみ*/
+  color: #0055FF;
 }
 
-// .tbl td{
-//   width: 10%;
+// .tbl p{
+//   width: 500px;
+// }
+// .tbl a{
+//   width: auto;
 // }
 
-.tbl p{
-  width: 500px;
-}
-.tbl a{
-  width: auto;
-}
-
 // new 画面
-.btn_index{
-	background-color: #CCEEFF;
-}
-.btn{
-	background-color: #CCEEFF;
-  // font-size:2rem;
-  // width: 100px;
-  // margin-left: 20px;
-  // margin-right: 50px;
-}
+// .btn_index{
+// 	background-color: #CCEEFF;
+// }
+// .btn{
+// 	background-color: #CCEEFF;
+// }
 
 
 // footer領域
